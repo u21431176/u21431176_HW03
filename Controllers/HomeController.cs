@@ -10,21 +10,37 @@ namespace u21431176_HW03.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Everything to do with handling your media";
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Files()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Media/Documents/ folder";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Images()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Media/Images/ folder";
 
             return View();
         }
+
+        public ActionResult Videos()
+        {
+            ViewBag.Message = "Media/Videos/ folder";
+
+            return View();
+        }
+
+        public ActionResult Aboutme()
+        {
+            ViewBag.Message = "I hope you're ready";
+
+            return View();
+        }
+
     }
 }
