@@ -3,3 +3,35 @@
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+
+<div class="container">
+    <br />
+    <div class="col-sm-6">
+        <h3>Description</h3>
+        <p>
+            This system has a File page which allows users to delete or download uploaded files, an Images page which displays all
+            uploaded images which can then be downloaded or deleted and a Videos page which which displays all
+            uploaded videos which can then be downloaded or deleted.
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <h3>
+            Option Selection
+        </h3>
+        <div>
+            <p>Document</p>
+            <p>Image</p>
+            <p>Video</p>
+        </div>
+        <div class="well-sm">
+            <div class="form-horizontal">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div><input type="file" name="Files" /></div>
+                    <br />
+                    <div><input type="submit" name="Upload" /></div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
